@@ -2,10 +2,11 @@ import os
 import json
 import pandas as pd
 import traceback
+from uuid import UUID
 
 
-from mcqgenerator.logger import logging
-from mcqgenerator.utils import read_file, get_table_data
+from src.mcqgenerator.logger import logging
+from src.mcqgenerator.utils import read_file, get_table_data
 
 from langchain_google_genai.chat_models import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
@@ -66,7 +67,6 @@ quiz_evaluation_prompt = PromptTemplate(
 
 #chain for the evaluation
 evaluation_chain = LLMChain(llm=llm, prompt=quiz_evaluation_prompt, output_key="review", verbose=True)
-
 
 #sequential chain for the quiz generation and evaluation
 generate_evaluate_chain = SequentialChain(chains=[quiz_chain, evaluation_chain], input_variables=["text", "number", "subject", "tone", "response_json"], output_variables=["quiz", "review"], verbose=True)

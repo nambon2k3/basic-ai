@@ -5,7 +5,7 @@ import traceback
 
 
 def read_file(file):
-    if file.endswith('.pdf'):
+    if file.name.endswith('.pdf'):
         try:
             pdf_reader = PyPDF2.PdfFileReader(file)
             text=""
@@ -14,7 +14,7 @@ def read_file(file):
             return text
         except Exception as e:
             raise Exception(f"Error reading pdf file: {e}")
-    elif file.endswith('.txt'):
+    elif file.name.endswith('.txt'):
         try:
             text = file.read()
             return text
@@ -25,10 +25,9 @@ def read_file(file):
 
 def get_table_data(quiz_dict):
     try:
-        #clean quiz data to format to json
-        cleaned_quiz = quiz_dict.replace("```json\n", "").strip()
-        cleaned_quiz = quiz_dict.replace("```", "").strip()
-        quiz_dict = json.loads(cleaned_quiz)
+        #load the dictionary
+        quiz_dict = json.loads(quiz_dict)
+
         quiz_table_data = []
 
         #iterate through the dictionary and append to the list

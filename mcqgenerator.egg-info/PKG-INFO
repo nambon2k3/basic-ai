@@ -8,3 +8,4 @@ Requires-Dist: python-dotenv
 Requires-Dist: pypdf2
 Requires-Dist: google-generativeai
 Requires-Dist: langchain-google-genai
+Requires-Dist: langchain-community
