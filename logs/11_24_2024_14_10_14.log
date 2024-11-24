@@ -1,0 +1,1 @@
+[2024-11-24 14:10:23,083] 57 root - ERROR - Error generating MCQs: 'OpenAICallbackHandler' object has no attribute 'run_id'

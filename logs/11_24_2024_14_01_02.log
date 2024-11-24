@@ -1,0 +1,1 @@
+[2024-11-24 14:01:11,779] 54 root - ERROR - Error generating MCQs: Chain.invoke() missing 1 required positional argument: 'input'

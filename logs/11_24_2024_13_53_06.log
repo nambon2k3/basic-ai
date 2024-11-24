@@ -1,0 +1,1 @@
+[2024-11-24 13:56:02,681] 54 root - ERROR - Error generating MCQs: 'UploadedFile' object has no attribute 'endswith'

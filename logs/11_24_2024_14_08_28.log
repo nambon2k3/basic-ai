@@ -1,0 +1,4 @@
+[2024-11-24 14:08:36,613] 57 root - ERROR - Error generating MCQs: 1 validation error for RunInfo
+run_id
+  UUID input should be a string, bytes or UUID object [type=uuid_type, input_value=UUID('77cbf631-82c2-4803-8e57-c92ab7d5247d'), input_type=UUID]
+    For further information visit https://errors.pydantic.dev/2.10/v/uuid_type

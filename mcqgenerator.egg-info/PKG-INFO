@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mcqgenerator
+Version: 0.1
+Author: Nam
+Requires-Dist: langchain
+Requires-Dist: streamlit
+Requires-Dist: python-dotenv
+Requires-Dist: pypdf2
+Requires-Dist: google-generativeai
+Requires-Dist: langchain-google-genai
