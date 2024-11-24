@@ -1,4 +1,4 @@
-import os
+
 import json
 import pandas as pd
 import traceback
@@ -10,6 +10,7 @@ from src.mcqgenerator.utils import read_file, get_table_data
 
 from langchain_google_genai.chat_models import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
+import streamlit as st
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
@@ -17,9 +18,8 @@ from langchain.callbacks import get_openai_callback
 
 
 #load environment variables
-load_dotenv()
 
-API_KEY = os.getenv("API_KEY")
+API_KEY = st.secrets["API_KEY"]
 
 #get the model of gemini-1.5-flash
 llm = ChatGoogleGenerativeAI(api_key=API_KEY, model='gemini-1.5-flash', temperature=0.5)
